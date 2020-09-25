@@ -59,16 +59,6 @@ async def typewriter(typew):
 	sleep(1)
 	await typew.edit("`Maaf baru online, ada apa bos?` \n#SenturyBot")
 	
-	# Create by myself @JejakCheat
-@register(outgoing=True, pattern='^.o(?: |$)(.*)')
-async def typewriter(typew):
-	message = typew.pattern_match.group(0)
-	sleep(0)
-	await typew.edit("`Hai Halo Bosku`")
-	sleep(2)
-	await typew.edit("`Gw udah online`")
-	sleep(1)
-	await typew.edit("`Maaf baru online, ada apa bos?` \n#SenturyBot")
 
 
 # Create by myself @JejakCheat
