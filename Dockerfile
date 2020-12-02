@@ -20,7 +20,6 @@ RUN apk add --no-cache=true --update \
     g++ \
     git \
     sudo \
-    aria2 \
     util-linux \
     libevent \
     jpeg-dev \
@@ -75,7 +74,7 @@ RUN python3 -m ensurepip \
 # Clone repo and prepare working directory
 #
 
-RUN git clone -b sql-extended https://github.com/jefa2231/planethostings2 /root/userbot
+RUN git clone -b sql-extended https://github.com/mkaraniya/OpenUserBot /root/userbot
 RUN mkdir /root/userbot/.bin
 WORKDIR /root/userbot/
 ENV PATH="/root/userbot/.bin:$PATH"
@@ -90,4 +89,5 @@ COPY ./sample_config.env ./userbot.session* ./config.env* /root/userbot/
 #
 RUN pip3 install -r requirements.txt
 CMD ["python3","-m","userbot"]
+
 
